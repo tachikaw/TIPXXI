@@ -32,4 +32,7 @@
 
     <string name="OK">OK</string>
 
+    <!-- Debugging (tipxxi): Testing GitHub functionalities -->
+    <string name="string_test0">string_test0</string>
+
 </resources>
