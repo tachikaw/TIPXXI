@@ -52,4 +52,7 @@
 
     <item name="relativeLayoutCalendar" type="id"/>
 
+    <!-- Debugging (tipxxi): Testing GitHub functionalities -->
+    <item name="testId" type="id"/>
+
 </resources>
