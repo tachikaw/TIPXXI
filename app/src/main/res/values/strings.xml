@@ -34,5 +34,6 @@
 
     <!-- Debugging (tipxxi): Testing GitHub functionalities -->
     <string name="string_test0">string_test0</string>
+    <string name="string_test1">string_test1</string>
 
 </resources>
