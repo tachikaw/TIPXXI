@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="mButtonCancel" type="id"/>
+    <item name="mButtonDelete" type="id"/>
+    <item name="mButtonDone" type="id"/>
+    <item name="mButtonExit" type="id"/>
+    <item name="mButtonMoedeiro" type="id"/>
+    <item name="mButtonNew" type="id"/>
+    <item name="mButtonPageDown" type="id"/>
+    <item name="mButtonPageUp" type="id"/>
+    <item name="mButtonSave" type="id"/>
+    <item name="mButtonSend" type="id"/>
+    <item name="mButtonCalendar" type="id"/>
+
+    <item name="mCheckBoxEditEntityFieldValueColumn" type="id"/>
+    <item name="mCheckBoxEditField" type="id"/>
+
+    <item name="mEditTextEditField" type="id"/>
+
+    <item name="mForwardButtonAction" type="id"/>
+    <item name="mForwardButtonValidationMethod" type="id"/>
+    <item name="mForwardButtonValidationMethodClassName" type="id"/>
+
+    <item name="mKeyboardView" type="id"/>
+
+    <item name="mListViewEditEntity" type="id"/>
+
+    <item name="mSpinnerEditField" type="id"/>
+
+    <item name="mTextViewBreadcrumb" type="id"/>
+    <item name="mTextViewEditEntityFieldNameColumn" type="id"/>
+    <item name="mTextViewEditField" type="id"/>
+    <item name="mTextViewEntityColumn" type="id"/>
+    <item name="mTextViewListEntityFieldNameColumn" type="id"/>
+    <item name="mTextViewListEntityFieldValueColumn" type="id"/>
+    <item name="mTextViewPageInformation" type="id"/>
+
+    <!-- Debugging -->
+    <item name="mRelativeLayout" type="id"/>
+
+    <!--&lt;!&ndash; Debugging: Creating submenus (begin). &ndash;&gt;-->
+
+    <!--<item name="mRelativeLayout1" type="id"/>-->
+    <!--<item name="mRelativeLayout2" type="id"/>-->
+
+    <!--&lt;!&ndash; Debugging: Creating submenus (end). &ndash;&gt;-->
+
+    <item name="AlertDialogTitle" type="id"/>
+    <item name="AlertDialogMessage" type="id"/>
+    <item name="AlertDialogButtonOK" type="id"/>
+
+    <item name="relativeLayoutCalendar" type="id"/>
+
+</resources>

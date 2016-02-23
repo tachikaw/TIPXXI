@@ -1,0 +1,35 @@
+<resources>
+
+    <string name="app_name">TIPXXI</string>
+
+    <string name="buttonNew">New</string>
+
+    <string name="calendar">Calendar</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="delete">Delete</string>
+    <string name="done">Done</string>
+
+    <string name="exit">Exit</string>
+
+    <string name="nao_PT">Não</string>
+    <string name="next">Next</string>
+
+    <string name="page_down">Page Down</string>
+    <string name="page_up">Page Up</string>
+    <string name="pesagem">Pesagem</string>
+    <string name="previous">Previous</string>
+
+    <string name="save">Save</string>
+    <string name="sim_PT">Sim</string>
+
+    <!-- Debugging -->
+    <string name="actionmode_cancel">Cancel ActionMode</string>
+    <string name="actionmode_title">Action Mode</string>
+
+    <string name="OK">OK</string>
+
+</resources>

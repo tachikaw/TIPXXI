@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+    Item types:
+
+        grid.
+        edit.
+        action.
+
+-->
+
+<menus>
+
+    <submenu name="Consultas">
+
+        <!--
+
+            (1/3)
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Form_TabelaHistorico.bas
+
+            Android:
+
+                Grid with no selectable items.
+
+         -->
+        <item
+            name="Histórico"
+            className="com.bpaulo.tipxxi.entity.Historico"
+            type="grid"/>
+
+        <!--
+
+            (2/3)
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Form_MainMenu.bas
+
+                    Acessos_IniciaTransicaoForm frm_ThisForm, "frm_ListagemPesagens", "Consultar Listagens"
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Form_ListagemPesagens.bas
+
+                res = Array(_
+                        Array (11, 	"CAIXA - RESUMIDO", 				True, 	"", 			"", 			"", 				xCorFundo, 	xCorTexto, 	"i"), _
+                        Array (1, 	"CAIXA - DIARIO - RESUMIDO", 	True, 	"", 			"", 			"", 				xCorFundo, 	xCorTexto, 	"i"), _
+                        Array (2, 	"CAIXA - DIARIO - DETALHADO", True, 	"", 			"", 			"", 				xCorFundo, 	xCorTexto, 	"i"), _
+                        Array (12, 	"SAFT - EXPORTAÇÃO", 			True, 	"", 			"", 			"", 				xCorFundo, 	xCorTexto, 	"g"), _
+                        Array (3, 	"PESAGENS - DETALHADO", 		True, 	"", 			"", 			"", 				xCorFundo, 	xCorTexto, 	"i"), _
+                        Array (4, 	"PESAGENS - RESUMIDO", 			True, 	"", 			"", 			"", 				xCorFundo, 	xCorTexto, 	"i"), _
+                        Array (5, 	"PESAGENS - DIARIO", 			True, 	"", 			"", 			"", 				xCorFundo, 	xCorTexto, 	"i"), _
+                        Array (6, 	"PESAGENS POR ARTIGO", 			True, 	"", 			"", 			"", 				xCorFundo, 	xCorTexto, 	"i"), _
+                        Array (7, 	"PESAGENS POR EMPRESA", 		True, 	"", 			"", 			"", 				xCorFundo, 	xCorTexto, 	"i"), _
+                        Array (8, 	"PESAGENS POR MATRICULA", 		True, 	"", 			"", 			"", 				xCorFundo, 	xCorTexto, 	"i"), _
+                        Array (9, 	"PESAGENS - EXPORTAÇÃO", 		True, 	"", 			"", 			"", 				xCorFundo, 	xCorTexto, 	"g"), _
+                        Array (10, 	"PES. PARCIAIS - EXPORTAÇÃO", True, 	"", 			"", 			"", 				xCorFundo, 	xCorTexto, 	"g"))
+
+            Android:
+
+                Q: "Consultas" column: (2/3) "Listagens".
+
+                    A:
+
+                        The same funcionalities for all the different reports.
+                        Edit screen (the filter fields) with a "Print" button.
+
+         -->
+        <item
+            name="Listagens"
+            className="com.bpaulo.tipxxi.menuprincipal.PrintActivity"
+            type="action"/>
+        <!--
+
+            (3/3) Desativado.
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Form_MainMenu.bas
+
+                    auxContexto = TabelaParque_PreparaTabelaGenerica (frm_ThisForm)
+                    Acessos_IniciaTransicaoForm frm_ThisForm, "frm_TabelaGenerica", auxContexto
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Form_TabelaParque.bas
+
+                array_Campos = Array(_
+                    Array("NumPesagem",	"Pesagem",		T_ALFANUM,		False, 	1500, 			4, 					"",					0, 					True, 		False), _
+                    Array("IDVeiculo",	"Matricula",	T_ALFANUM,		False, 	2000, 			4, 					"",					0, 					True, 		False), _
+                    Array("DataPesagem",	"Data",			T_ALFANUM,		False, 	2000, 			4, 					"",					0, 					True, 		False), _
+                    Array("HoraPesagem",	"Hora",			T_ALFANUM,		False, 	1650, 			4, 					"",					0, 					True, 		False), _
+                    Array("Bruto",			"Peso (kg)",	T_ALFANUM, 		False, 	1800,				7, 					"",					0, 					True, 		False), _
+                    Array("IDSerie",		"Serie",			T_ALFANUM, 		False,	0,					4, 					"",					0, 					False, 		False))
+
+        -->
+        <!--
+        <item
+            name="Parque"
+            className="com.bpaulo.tipxxi.entity.Parque"
+            type="grid"/>
+         -->
+
+    </submenu>
+
+    <submenu name="Tabelas">
+
+        <!--
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_BaseDados.bas
+
+                Select Case p_tbName
+                    Case "tbPesagens"
+                        res = Pesagens_GerarArrayConstrucaoTabela
+                    Case "tbPesagensParciais"
+                        res = PesagensParciais_GerarArrayConstrucaoTabela
+                    Case "tbImpressoraPosto"
+                        res = ImpressoraPosto_GerarArrayConstrucaoTabela
+                    Case "tbImpressoras"
+                        res = Impressoras_GerarArrayConstrucaoTabela
+                    Case "tbParametros"
+                        res = Parametros_GerarArrayConstrucaoTabela
+                    Case "tbVisores"
+                        res = Visores_GerarArrayConstrucaoTabela
+                    Case "tbVisorPosto"
+                        res = VisorPosto_GerarArrayConstrucaoTabela
+                    Case "tbVeiculos"
+                        res = Veiculos_GerarArrayConstrucaoTabela
+                    Case "tbEmpresas"
+                        res = Empresas_GerarArrayConstrucaoTabela
+                    Case "tbArtigos"
+                        res = Artigos_GerarArrayConstrucaoTabela
+                    Case "tbCartoes"
+                        res = Cartoes_GerarArrayConstrucaoTabela
+                    Case "tbTaras"
+                        res = Taras_GerarArrayConstrucaoTabela
+                    Case "tbLeitorCartoesPosto"
+                        res = LeitorCartoesPosto_GerarArrayConstrucaoTabela
+                    Case "tbMoedeiro"
+                        res = Moedeiro_GerarArrayConstrucaoTabela
+                    Case "tbAcessos"
+                        res = Acessos_GerarArrayConstrucaoTabela
+                    Case "tbTarifasMoedeiro"
+                        res = Tarifas_GerarArrayConstrucaoTabela
+                    Case "tbMoedasMoedeiro"
+                        res = Moedas_GerarArrayConstrucaoTabela
+                    Case "tbOperadores"
+                        res = Operadores_GerarArrayConstrucaoTabela
+                    Case "tbIdiomas"
+                        res = Idiomas_GerarArrayConstrucaoTabela
+                    Case Else
+                        WriteFileLOG "Case Else Error!!! - " & strFuncDesc
+                End Select
+
+
+         -->
+
+        <!--
+
+            (1/7)
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Form_TabelaArtigos.bas
+
+                array_Campos = Array(_
+                    Array("CodArtigo",			"ID Artigo",	T_ALFANUM,		False, 	3000, 			4, 					"",					0, 					False, 		True), _
+                    Array("DesignacaoArtigo",	"Designação", 	T_ALFANUM,		False, 	5950, 			1, 					"",					0,						False, 		True))
+
+         -->
+        <item
+            name="Artigos"
+            className="com.bpaulo.tipxxi.entity.Artigo"
+            type="grid"/>
+
+        <!--
+
+            (2/7)
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Form_TabelaCartoes.bas
+
+            array_Campos = Array(_
+                Array("CartaoID",					"Cartão",			T_ALFANUM,		False, 	3000,				4,						"",					16,					True,			True), _
+                Array("CartaoIDVeiculo",		"Veículo",			T_ALFANUM,		False, 	1850,				4, 					"",					0,					 	True,			True), _
+                Array("CartaoIDArtigo",			"Artigo",			T_ALFANUM,		False, 	1800,				4, 					"",					0, 					False,		True), _
+                Array("CartaoIDEmpresa",		"Empresa",			T_ALFANUM,		False,	1800,				4,						"",					0,						False,	 	True), _
+                Array("CartaoActivado",			"A;Activado",		T_BOOL & ";3",	True,		500,				4, 					T_LETRA_SYMBOL,	20,					True,		 	True), _
+                Array("CartaoDescricao",		"Descrição",		T_ALFANUM, 		True,		0,					1,						"",					10,					False,	 	True), _
+                Array("CartaoTipoOperacao",	"Tipo Operação",	T_LISTA_C06,	True,		0,					1, 					"",					0,						True,		 	True), _
+                Array("CartaoObs",				"Observações",		T_ALFANUM, 		True,		0,					1, 					"",					0,						False,	 	True), _
+                Array("ModoEmMoedeiro",			"Modo Moedeiro",	T_LISTA_C08, 	True,		0,					1, 					"",					0,						True,		 	True), _
+                Array("SaldoCartao",				"Saldo",				T_NumDecimal, 	True,		0,					1, 					"",					0,						True, 		True), _
+                Array("PlafondCartao",			"Plafond",			T_NumDecimal,	True,		0,					1, 					"",					0,						True,		 	True), _
+                Array(xDesigCampo11, 			"Desig. Artigo",	T_ALFANUM,	 	True,		0,					1, 					"",					0,						True, 		False), _
+                Array(xDesigCampo12,				"Nome Empresa",	T_ALFANUM, 		True,		0,					1, 					"",					0,						True,		 	False))
+
+         -->
+        <item
+            name="Cartões"
+            className="com.bpaulo.tipxxi.entity.Cartao"
+            type="grid"/>
+
+        <!--
+
+            (3/7)
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Form_TabelaEmpresas.bas
+
+                array_Campos = Array(_
+                    Array("CodEmpresa",				"Codigo",			T_ALFANUM,		False, 	2500, 			4, 					"",					0, 					True, 		True), _
+                    Array("DesignacaoEmpresa",		"Designação",		T_ALFANUM, 		False, 	4000, 			1, 					"",					0, 					True, 		True), _
+                    Array("EmpresaMorada",			"Morada",   		T_ALFANUM, 		True,		0,					1, 					"",					0, 					True, 		True), _
+                    Array("EmpresaNIF",				"NIF",				T_ALFANUM, 		False, 	2450,				4, 					"",					0, 					True, 		True))
+
+        -->
+        <item
+            name="Empresas"
+            className="com.bpaulo.tipxxi.entity.Empresa"
+            type="grid"/>
+
+        <!--
+
+            (4/7) Desativado.
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Form_TabelaOperadores.bas
+
+                array_Campos = Array(_
+                    Array("IDOperador",		"Operador",	T_ALFANUM,		False, 	2000, 			4, 					"",					0, 					False, 		True), _
+                    Array("NomeOperador",	"Nome", 		T_ALFANUM, 		False, 	6950, 			1, 					"",					0,						False, 		True) )
+
+        -->
+        <!--
+        <item
+            name="Operadores"
+            className="com.bpaulo.tipxxi.entity.Operador"
+            type="grid"/>
+        -->
+
+        <!--
+
+            (5/7) Desativado.
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Form_TabelaTaras.bas
+
+                array_Campos = Array(_
+                    Array("CodTara",					"Codigo",			T_ALFANUM, 		False, 	3000, 			4, 					"",					0, 					False, 		True), _
+                    Array("DesignacaoTara",			"Designação",		T_ALFANUM, 		False, 	2500, 			1, 					"",					0, 					False, 		True), _
+                    Array("PesoTara",					"Peso Tara",		T_DECIMAL, 	False, 	3450, 			1, 					"",					0, 					False, 		True))
+
+        -->
+        <!--
+        <item
+            name="Taras"
+            className="com.bpaulo.tipxxi.entity.Tara"
+            type="grid"/>
+        -->
+
+        <!--
+
+            (6/7)
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Form_TabelaTarifas.bas
+
+                array_Campos = Array(_
+                    Array("IDTarifa",					"ID",					T_ALFANUM,		False, 	1500, 			4, 					"",					0, 					False, 		True), _
+                    Array("PesoMinEscalao",			"Peso Mínimo",		T_ALFANUM,		False, 	2480, 			7, 					"",					0, 					False, 		True), _
+                    Array("PesoMaxEscalao",			"Peso Máximo",		T_ALFANUM,		False, 	2480, 			7, 					"",					0, 					False, 		True), _
+                    Array("TarifaEscalao",			"Preço", 			T_NumDecimal, 	False, 	2490, 			7, 					"",					0, 					False, 		True) )
+
+        -->
+        <item
+            name="Tarifas"
+            className="com.bpaulo.tipxxi.entity.Tarifa"
+            type="grid"/>
+
+        <!--
+
+            (7/7)
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Form_TabelaVeiculos.bas
+
+                array_Campos = Array(_
+                    Array("IDVeiculo",		"ID Veículo",		T_ALFANUM, 		False, 	3000, 			4, 					"",					0, 					False, 		True), _
+                    Array("TaraVeiculo",		"Tara.kg",			T_ALFANUM, 		False, 	2500, 			7, 					"",					0, 					False, 		True), _
+                    Array("IDEmpresa",		"Empresa", 			T_ALFANUM, 		False, 	3450, 			4, 					"",					0,	 					False, 		True))
+
+        -->
+        <item
+            name="Veículos"
+            className="com.bpaulo.tipxxi.entity.Veiculo"
+            type="grid"/>
+
+    </submenu>
+
+    <submenu name="Preferências">
+
+        <!--
+
+            (1/3)
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Form_ConfigAcessos.bas
+
+                array_EditarRegistoCampos = Array(_
+                    Array("Nivel 1", 	aux_parametros(0),	True, 		T_NUMERICO,	"", 							False,	"", 						10, 			0), _
+                    Array("Nivel 2", 	aux_parametros(1),	True, 		T_NUMERICO,	"", 							False,	"", 						10, 			1), _
+                    Array("Nivel 3", 	aux_parametros(2),	True, 		T_NUMERICO,	"", 							False,	"", 						10, 			2), _
+                    Array("Nivel 4", 	aux_parametros(3),	True, 		T_NUMERICO,	"", 							False,	"", 						10, 			3), _
+                    Array("Nivel 5", 	aux_parametros(4),	True, 		T_NUMERICO,	"", 							False,	"", 						10, 			4))
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Classe_Acessos.bas
+
+                Acessos_GerarArrayConstrucaoTabela = Array(_
+                    Array ("PassNivel1",		"VarChar(10)"),	_
+                    Array ("PassNivel2",		"VarChar(10)"),	_
+                    Array ("PassNivel3",		"VarChar(10)"),	_
+                    Array ("PassNivel4",		"VarChar(10)"),	_
+                    Array ("PassNivel5",		"VarChar(10)") )
+
+        -->
+        <item
+            name="Acessos"
+            className="fakeClassNameAcessos"
+            type="edit"/>
+
+        <!--
+
+            (2/3)
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Form_ConfigPreferenciasImpressao.bas
+
+                array_EditarRegistoCampos = Array(_
+                    Array("N. Linhas de Cabeçalho",	aux_parametros(5),	False, 		T_NUMERICO,	"",							True,		"", 						1, 			5), _
+                    Array("Cabeç. Linha 1",				aux_parametros(6),	False, 		T_ALFANUM,	"",							False,	"", 						40, 			6), _
+                    Array("Cabeç. Linha 2",				aux_parametros(7),	False, 		T_ALFANUM,	"",							False,	"", 						40, 			7), _
+                    Array("Cabeç. Linha 3",				aux_parametros(8),	False, 		T_ALFANUM,	"",							False,	"", 						40, 			8), _
+                    Array("Cabeç. Linha 4",				aux_parametros(9),	False, 		T_ALFANUM,	"",							False,	"", 						40, 			9), _
+                    Array("Cabeç. Linha 5",				aux_parametros(10),	False, 		T_ALFANUM,	"",							False,	"", 						40, 			10), _
+                    Array("Cabeç. Linha 6",				aux_parametros(11),	False, 		T_ALFANUM,	"",							False,	"", 						40, 			11), _
+                    Array("Cabeç. Linha 7",				aux_parametros(12),	False, 		T_ALFANUM,	"",							False,	"", 						40, 			12), _
+                    Array("Cabeç. Linha 8",				aux_parametros(13),	False, 		T_ALFANUM,	"",							False,	"", 						40, 			13), _
+                    Array("N. Linhas de Rodapé",		aux_parametros(14),	False,	 	T_NUMERICO, "",							True,		"", 						1, 			14), _
+                    Array("Rodapé Linha 1",				aux_parametros(15),	False, 		T_ALFANUM,	"",							False,	"", 						40, 			15), _
+                    Array("Rodapé Linha 2",				aux_parametros(16),	False, 		T_ALFANUM,	"",							False,	"", 						40, 			16), _
+                    Array("Rodapé Linha 3",				aux_parametros(17),	False, 		T_ALFANUM,	"",							False,	"", 						40, 			17), _
+                    Array("N. Linhas Avanço Rodapé",	aux_parametros(18),	False,		T_NUMERICO,	"",							True,		"", 						2, 			18), _
+                    Array("Número de Vias",				aux_parametros(0),	False, 		T_NUMERICO,	"",							True,		"", 						2, 			0), _
+                    Array("Imprime Talão Parcial",	aux_parametros(1),	False, 		T_BOOL,		"",							True,		"", 						3, 			1), _
+                    Array("Imprime Talão Total",		aux_parametros(2),	False, 		T_BOOL,		"",							True,		"", 						3, 			2), _
+                    Array("Label Empresa TP",			aux_parametros(3),	False, 		T_ALFANUM,	"",							False,	"", 						10, 			3), _
+                    Array("Label Referência TP",		aux_parametros(4),	False, 		T_ALFANUM,	"",							False,	"", 						10, 			4), _
+                    Array("Reinicia Núm. Talao/Ano",	aux_parametros(19),	False, 		T_BOOL,		"",							True,		"", 						3, 			19), _
+                    Array("Tempo Mostragem Peso",		aux_parametros(20),	False, 		T_NUMERICO,	"",							True,		"", 						3, 			20), _
+                    Array("Fich. Formato TP",			aux_parametros(21),	False, 		T_ALFANUM,	"",							False,	"", 						20, 			21), _
+                    Array("Mostra Preço (Via)",		aux_parametros(22),	False, 		T_ALFANUM,	"",							False,	"", 						10, 			22), _
+                    Array("Emite FR",						aux_parametros(23),	False, 		T_BOOL,		"",							False,	"", 						3, 			23))
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Classe_ImpressoraPosto.bas
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Classe_Impressoras.bas
+
+        -->
+        <item
+            name="Impressão"
+            className="fakeClassNameImpressao"
+            type="edit"/>
+
+        <!--
+
+            (3/3)
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Form_ConfigSistema.bas
+
+                array_EditarRegistoCampos = Array(_
+                    Array("Modo de Acesso",	aux_parametros(0),	False, 		T_LISTA,		xAt0,							True,		"", 						20, 			0), _
+                    Array("Tempo max NIF",	aux_parametros(2),	False,		T_NUMERICO,	"",							True,		"", 						4, 			1), _
+                    Array("Idioma",			aux_parametros(1),	False, 		T_TABELA,	xAt1,							True,		"", 						2, 			2), _
+                    Array("Data Atual",		aux_parametros(3),	False, 		T_DATA,		"",							True,		"", 						10, 			3), _
+                    Array("Hora",				aux_parametros(4),	False, 		T_HORA,		"",							True,		"", 						5, 			4))
+
+        -->
+        <item
+            name="Sistema"
+            className="fakeClassNameSistema"
+            type="edit"/>
+
+    </submenu>
+
+    <submenu name="Manutenção">
+
+        <!--
+
+            (1/3) Não necessário!
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\
+
+        -->
+        <!--
+        <item
+            name="Conf. Cartão"
+            className=""
+            type=""/>
+         -->
+
+        <!--
+
+            (2/3)
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Form_MainMenu.bas
+
+        -->
+        <item
+            name="Terminar"
+            className="com.bpaulo.tipxxi.menuprincipal.TerminarActivity"
+            type="action"/>
+
+        <!--
+
+            (3/3)
+
+            \NSBasic\TIPXXI_Menu_Principal\Modulos\mdl_Form_MainMenu.bas
+
+        -->
+        <item
+            name="Reiniciar Ap."
+            className="com.bpaulo.tipxxi.menuprincipal.ReiniciarActivity"
+            type="action"/>
+
+
+    </submenu>
+
+</menus>

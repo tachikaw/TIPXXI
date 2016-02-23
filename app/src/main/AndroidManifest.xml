@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.bpaulo.tipxxi"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Allows an application to receive the ACTION_BOOT_COMPLETED that is broadcast after the system finishes booting. -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- Allows read only access to phone state. -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+
+    <!-- Allows an application to read from external storage. -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" >
+    </uses-permission>
+
+    <!-- Allows an application to write to external storage. -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="16" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme">
+        <!-- Debugging: tipxxi (begin) -->
+        <activity
+            android:name="com.bpaulo.tipxxi.moedeiro.MoedeiroActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name">
+        <!--
+        <activity
+            android:name="com.bpaulo.tipxxi.moedeiro.MoedeiroActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme">
+         -->
+            <!-- Debugging: tipxxi (end) -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.bpaulo.tipxxi.menuprincipal.MenuPrincipalActivity">
+        </activity>
+
+        <activity
+            android:name="com.bpaulo.tipxxi.activity.ControlPanelActivity">
+        </activity>
+
+        <activity
+            android:name="com.bpaulo.tipxxi.activity.DynamicEditSectionActivity">
+        </activity>
+
+        <activity
+            android:name="com.bpaulo.tipxxi.activity.DynamicEditFieldSectionActivity">
+        </activity>
+
+        <!-- Debugging (tipxxi): T_TABELA & T_LISTA new selection screen (begin) -->
+        <activity
+            android:name="com.bpaulo.tipxxi.activity.DynamicGridEntityFieldSelectionActivity">
+        </activity>
+        <!-- Debugging (tipxxi): T_TABELA & T_LISTA new selection screen (end) -->
+
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+    </application>
+
+</manifest>

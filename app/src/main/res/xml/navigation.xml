@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- TODO: Creating Android/Java abstractions over Navigation related code (to encapsulate). Ex: Navigation Class & methods. -->
+
+<navigation>
+
+    <!--
+        Optional declaration.
+        Cardinality: n.
+    -->
+    <screen name="ArranqueActivity">
+
+        <!--
+            Mandatory: At least one <forward declaration for each <screen declaration.
+            Cardinality: n.
+        -->
+        <forward
+            breadcrumbText="Login"
+            className="com.bpaulo.tipxxi.activity.DynamicEditSectionActivity"
+            trigger="R.id.mButtonFunction4">
+
+            <!--
+                Optional declaration.
+                Cardinality: 1.
+            -->
+            <!-- TODO: How to resolve in TIPXXI context? -->
+            <forwardEntity
+                name="com.bpaulo.comunicaxxilight.entity.Parametro">
+
+            <!--
+                    Optional declaration: If no <field declaration, by default, all the fields of <entity will be used.
+                    Cardinality: n.
+                -->
+                <entityField
+                    name="adminPassword"/>
+
+                <!-- Testing: Works fine!-->
+                <!--
+                <entityField
+                    name="numLinhasRodape"/>
+                 -->
+
+            </forwardEntity>
+
+            <!--
+                Optional declaration.
+                Cardinality: n.
+
+                The attribute values 'validationMethodParameter' and 'validationMethodParameterType' are really needed? The validation method acts only in local context!
+
+                TODO: getActivity().overridePendingTransition(R.anim.anim_slide_in_right, R.anim.anim_slide_out_right);
+                TODO: getActivity().overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_out_left);
+
+            -->
+            <forwardButton
+                action="com.bpaulo.tipxxi.activity.ControlPanelActivity"
+                id="mButtonLogin"
+                label="Login"
+                validationMethod="loginValidation"
+                validationMethodClassName="com.bpaulo.tipxxi.activity.DynamicEditSectionActivity"/>
+            <!-- Testing: Works fine! -->
+            <!--
+            <forwardButton
+                action="com.bpaulo.comunicaxxilight.activity.ControlPanelActivity"
+                id="mButtonLogin"
+                label="Login"
+                validationMethod="loginValidation"
+                validationMethodClassName="com.bpaulo.comunicaxxilight.util.Utils"/>
+            -->
+            <!--
+            <forwardButton
+                action="com.bpaulo.comunicaxxilight.activity.ControlPanelActivity"
+                id="mButtonLogin"
+                label="Login"
+                validationMethod="loginValidation"
+                validationMethodClassName="com.bpaulo.comunicaxxilight.activity.DynamicEditSectionActivity"
+                validationMethodParameter="adminPassword"
+                validationMethodParameterType="java.lang.String"/>
+            -->
+            <!-- TODO: How to resolve in TIPXXI context? -->
+            <forwardButton
+                action="com.bpaulo.comunicaxxilight.activity.ArranqueActivity"
+                id="mButtonCancel"
+                label="Cancel"/>
+
+        </forward>
+
+    </screen>
+
+    <!-- Testing. -->
+    <!-- Testing: Works fine! -->
+    <screen name="DynamicEditSectionActivity">
+
+        <!-- Testing: Works fine! -->
+        <forward
+            breadcrumbText="Testing Navigation"
+            className="com.bpaulo.tipxxi.activity.ControlPanelActivity"
+            trigger="R.id.mButtonCancel">
+
+            <!-- Doesn't make sense test <forwardEntity... here. -->
+
+            <forwardButton
+                action="com.bpaulo.tipxxi.activity.ControlPanelActivity"
+                id="mButtonLogin"
+                label="Login"
+                validationMethod="loginValidation"
+                validationMethodClassName="com.bpaulo.tipxxi.activity.DynamicEditSectionActivity"/>
+
+        </forward>
+
+    </screen>
+
+</navigation>

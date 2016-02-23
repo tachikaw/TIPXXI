@@ -1,0 +1,600 @@
+<resources>
+
+    <!-- Debugging: tipxxi (begin) -->
+
+    <!--
+    Base application theme, dependent on API level. This theme is replaced
+    by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+     -->
+
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+
+        <!--Debugging: Removing & Customizing/Creating Title Bar (using any theme)-->
+        <!--Approach 00: http://stackoverflow.com/questions/17439683/how-to-change-action-bar-size-->
+
+        <!-- https://blog.stylingandroid.com/styling-the-actionbar-part-2/ (begin). -->
+
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+
+        <!-- Cut off in tipxxi! -->
+        <!--
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle</item>
+         -->
+
+        <!--
+        <item name="actionBarSize">@dimen/action_bar_default_height</item>
+        -->
+
+        <!--
+        <item name="android:actionBarStyle">@style/AppTheme.ActionBar</item>
+        -->
+
+        <!-- https://blog.stylingandroid.com/styling-the-actionbar-part-2/ (end). -->
+
+        <!-- https://blog.stylingandroid.com/styling-the-actionbar-part-3/ (begin). -->
+
+        <!-- Cut off in tipxxi! -->
+        <!--
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+         -->
+        <item name="android:dropDownListViewStyle">@style/DropDownListView</item>
+        <item name="android:actionBarWidgetTheme">@style/Theme.stylingactionbar.widget</item>
+        <!-- Cut off in tipxxi! -->
+        <!--
+        <item name="android:actionDropDownStyle">@style/DropDownNav</item>
+         -->
+        <item name="android:spinnerDropDownItemStyle">@style/DropDownItem</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItem</item>
+
+        <!-- https://blog.stylingandroid.com/styling-the-actionbar-part-3/ (end). -->
+
+        <!-- https://blog.stylingandroid.com/styling-the-actionbar-part-6/ (begin). -->
+
+        <!--
+        <item name="android:actionBarItemBackground">@drawable/selectable_item_background_stylingactionbar</item>
+        -->
+
+        <item name="android:actionModeBackground">@drawable/cab_background_top</item> <!-- No effect im my case! -->
+        <!-- No effect im my case! -->
+        <!-- Cut off in tipxxi! -->
+        <!--
+        <item name="android:actionModeCloseButtonStyle">@style/CloseButton</item>
+         -->
+
+        <!-- https://blog.stylingandroid.com/styling-the-actionbar-part-6/ (end). -->
+
+        <!-- Debugging: Footer. -->
+        <!--
+        <item name="android:buttonStyle">@style/AppTheme.Button</item>
+        -->
+
+        <!--
+        <item name="actionBarStyle">@style/AppTheme.ActionBar</item>
+        -->
+
+        <!-- Debugging: Customizing Spinner layout (begin). -->
+
+        <!-- Don't works! -->
+
+        <!--
+        <item name="android:actionBarWidgetTheme">@style/PopupWrapper</item>
+        -->
+
+        <!-- http://developer.android.com/guide/topics/ui/actionbar.html#Dropdown -->
+
+        <!--
+        <item name="android:actionDropDownStyle">@style/AppTheme.ActionDropDown</item>
+        -->
+
+        <!-- http://stackoverflow.com/questions/13703233/style-android-spinner -->
+
+        <!--
+        <item name="android:spinnerItemStyle">@style/AppTheme.SpinnerItem</item>
+        <item name="android:spinnerDropDownItemStyle">@style/AppTheme.SpinnerDropDownItem</item>
+        -->
+
+        <!-- http://stackoverflow.com/questions/11479186/styling-actionbar-dropdown-menu -->
+
+        <!--
+        <style name="Theme.myapp" parent="@style/Theme.Light.DarkActionBar">
+            <item name="android:actionDropDownStyle">@style/myapp_DropDownNav</item>
+            <item name="android:actionBarWidgetTheme">@style/myapp.actionBarWidgetTheme</item>
+        </style>
+        -->
+
+        <!--
+        <style name="ApplicationTheme" parent="@style/Theme.AppCompat">
+            <item name="android:actionBarWidgetTheme">@style/Theme.AppCompat.Light</item>
+            <item name="actionBarWidgetTheme">@style/Theme.AppCompat.Light</item>
+        </style>
+        -->
+
+        <!-- Debugging: Customizing Spinner layout (end). -->
+
+        <!-- ItemMenu style: http://stackoverflow.com/questions/8323544/modify-style-of-android-items-in-the-actionbar (begin). -->
+
+        <item name="android:actionMenuTextColor">@color/white</item> <!-- Works! -->
+        <item name="android:actionMenuTextAppearance">@style/TestActionMenuTextAppearance</item>
+
+        <!-- ItemMenu style: http://stackoverflow.com/questions/8323544/modify-style-of-android-items-in-the-actionbar (end). -->
+
+        <!-- Testing area -->
+
+        <!-- Works! -->
+
+        <!-- ActionBar Divider Styling (begin). -->
+
+        <!-- Caused by: android.content.res.Resources$NotFoundException: Resource is not a Drawable (color or path): TypedValue{t=0x1/d=0x7f060019 a=2 r=0x7f060019}-->
+        <!--
+        <item name="android:actionBarDivider">@style/TestactionBarDivider</item>
+        -->
+
+        <!--
+        <item name="android:divider">@color/pressed</item>
+        <item name="android:dividerHeight">1dp</item>
+        -->
+
+        <!-- Cut off in tipxxi! -->
+        <!--
+        <item name="android:actionBarDivider">@drawable/ic_navigation_more_vert</item>
+         -->
+        <!--
+        <item name="android:actionBarDivider">@drawable/ic_menu_moreoverflow_normal_holo_light</item>
+         -->
+
+        <!--
+        <item name="android:actionBarDivider">@android:drawable/title_bar_tall</item>
+        <item name="android:actionBarDivider">@android:drawable/ic_menu_directions</item>
+        <item name="android:actionBarDivider">@drawable/fastscroll_thumb_default_holo</item>
+        <item name="android:actionBarDivider">@drawable/delete</item>
+        -->
+
+        <!-- ActionBar Divider Styling (end). -->
+
+        <!--
+        <item name="android:actionButtonStyle">@style/AppTheme.Button</item>
+        -->
+
+        <!-- Don't works! -->
+
+        <!--
+        <item name="android:actionBarSize">50dp</item>
+        <item name="android:actionBarTabBarStyle">@style/TestActionBarTabBarStyle</item>
+        -->
+
+    </style>
+
+    <style name="TestactionBarDivider">
+
+        <item name="android:divider">@color/pressed</item>
+        <item name="android:dividerHeight">1dp</item>
+
+    </style>
+
+    <!-- ItemMenu style: http://stackoverflow.com/questions/8323544/modify-style-of-android-items-in-the-actionbar (begin). -->
+
+    <style name="TestActionMenuTextAppearance">
+
+        <!-- Works fine! -->
+
+        <item name="android:textSize">18dp</item>
+        <item name="android:textStyle">bold</item>
+
+        <!-- Testing -->
+
+        <!-- Don't works! -->
+        <!--
+        <item name="android:background">@drawable/blue_action_bar_background</item>
+        <item name="android:background">@color/red</item>
+        <item name="android:colorBackground">@color/red</item>
+        <item name="android:columnWidth">150dp</item>
+        <item name="android:divider">#FF0000</item>
+        <item name="android:dividerHeight">2dp</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:listPreferredItemPaddingLeft">50dp</item>
+        <item name="android:listPreferredItemPaddingRight">50dp</item>
+        <item name="android:minWidth">150dp</item>
+        <item name="android:textColor">@color/yellow</item>
+        <item name="android:width">150dp</item>
+        -->
+
+    </style>
+
+    <!-- ItemMenu style: http://stackoverflow.com/questions/8323544/modify-style-of-android-items-in-the-actionbar (end). -->
+
+    <!-- Debugging: Customizing Spinner layout (begin). -->
+
+    <!-- http://stackoverflow.com/questions/13703233/style-android-spinner -->
+
+    <style name="AppTheme.SpinnerItem">
+        <item name="android:textColor">#993399</item>
+        <!--
+        <item name="android:background">@drawable/my_rectangle</item>
+        -->
+    </style>
+    <style name="AppTheme.SpinnerDropDownItem">
+        <item name="android:textColor">#993399</item>
+        <!--
+        <item name="android:background">@drawable/my_rectangle</item>
+        -->
+    </style>
+
+    <!-- http://stackoverflow.com/questions/11479186/styling-actionbar-dropdown-menu -->
+
+    <!--
+    <style name="myapp.actionBarWidgetTheme" parent="@style/Theme.">
+        <item name="android:spinnerDropDownItemStyle">@style/myapp.Widget.DropDownItem.Spinner</item>
+    </style>
+
+    <style name="myapp_DropDownNav">
+        <item name="android:textColor">#993399</item>
+        <item name="background">@drawable/spinner_background_ab_myapp</item>
+        <item name="android:background">@drawable/spinner_background_ab_myapp</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_myapp</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_myapp</item>
+    </style>
+
+    <style name="myapp.Widget.DropDownItem.Spinner" parent="Widget.DropDownItem.Spinner">
+        <item name="android:textAppearance">@style/myapp.TextAppearance.Widget.DropDownItem</item>
+    </style>
+
+    <style name="myapp.TextAppearance.Widget.DropDownItem" parent="TextAppearance.Widget.DropDownItem">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    -->
+
+    <!-- Debugging: Customizing Spinner layout (end). -->
+
+    <!--Debugging: Removing & Customizing/Creating Title Bar (using any theme)-->
+    <!--Approach 00: http://stackoverflow.com/questions/17439683/how-to-change-action-bar-size-->
+    <style name="AppTheme.ActionBar">
+        <!-- Works fine! -->
+        <item name="android:background">@color/darkgray</item>
+
+        <item name="android:height">90dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:subtitleTextStyle">@style/AppTheme.ActionBar.SubTitleText</item>
+        <item name="android:titleTextStyle">@style/AppTheme.ActionBar.TitleText</item>
+        <!-- Don't works! -->
+        <item name="android:top">20dp</item>
+        <item name="android:actionBarSize">100dp</item>
+        <item name="android:actionBarTabTextStyle">@style/AppTheme.ActionBar.TabTextStyle</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:width">400dp</item>
+        <!--
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowActionBar">false</item>
+        -->
+    </style>
+    <!--
+    <style name="AppTheme.ActionBar" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/AppTheme.ActionBar.TitleText</item>
+        <item name="titleTextStyle">@style/AppTheme.ActionBar.TitleText</item>
+        <item name="android:height">@dimen/bar_height</item>
+        <item name="height">@dimen/bar_height</item>
+    </style>
+    -->
+
+    <!--Debugging: Removing & Customizing/Creating Title Bar (using any theme)-->
+    <!--Approach 00: http://stackoverflow.com/questions/17439683/how-to-change-action-bar-size-->
+    <style name="AppTheme.ActionBar.TitleText"> <!-- Works fine! -->
+        <item name="android:textColor">@color/cyan</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textStyle">bold</item>
+        <!-- Don't works! -->
+        <item name="android:background">@color/white</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+    </style>
+    <!--
+    <style name="AppTheme.ActionBar.TitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">@dimen/bar_text_size</item>
+        <item name="android:textColor">@color/bar_text_color</item>
+    </style>
+    -->
+
+    <!--Debugging: Removing & Customizing/Creating Title Bar (using any theme)-->
+    <!--Approach 00: http://stackoverflow.com/questions/17439683/how-to-change-action-bar-size-->
+    <style name="AppTheme.ActionBar.SubTitleText"> <!-- Don't works! -->
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+
+    <!-- Debugging: Removing & Customizing/Creating Title Bar (using any theme) -->
+    <!-- Approach 00: http://stackoverflow.com/questions/17439683/how-to-change-action-bar-size -->
+    <style name="AppTheme.ActionBar.TabTextStyle"> <!-- Don't works! -->
+
+        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="AppTheme.Button">
+
+        <item name="android:background">@color/lightslategray</item>
+        <item name="android:ems">40</item>
+        <item name="android:gravity">center|center_vertical</item>
+        <!--
+        <item name="android:gravity">bottom|center</item>
+        <item name="android:gravity">center_vertical</item>
+        -->
+        <item name="android:height">60dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_height">fill_parent</item>
+        <!--
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium.Inverse</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:width">10dp</item>
+
+        <!-- Works fine! -->
+
+        <!-- "android:width" and "android:textAppearance" related to this field. -->
+        <!--
+        <item name="android:textSize">15sp</item>
+        -->
+
+    </style>
+
+    <!-- http://developer.android.com/guide/topics/ui/actionbar.html#Dropdown -->
+
+    <style name="AppTheme.ActionDropDown">
+
+        <item name="android:textColor">@color/blue</item>
+        <!--
+        <item name="background">@color/blue</item>
+        -->
+        <item name="android:background">@color/blue</item>
+        <item name="android:popupBackground">@color/blue</item>
+        <item name="android:dropDownSelector">@color/blue</item>
+        <!-- Don't works! -->
+        <item name="android:textSize">25dp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <!-- Don't works! -->
+    <style name="PopupWrapper" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/AppTheme.ActionDropDown</item>
+    </style>
+
+    <!-- https://blog.stylingandroid.com/styling-the-actionbar-part-2/ (begin). -->
+
+    <style name="ActionBar">
+        <!--
+        <style name="ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        -->
+
+        <!-- Customizing (begin). -->
+
+        <!-- http://stackoverflow.com/questions/19659637/how-to-change-the-background-color-of-action-bars-option-menu-in-android-4-2 (begin). -->
+
+        <!--
+        <item name="android:background">@drawable/blue_action_bar_background</item>
+        -->
+        <item name="android:background">@color/slategray</item>
+
+        <!-- http://stackoverflow.com/questions/19659637/how-to-change-the-background-color-of-action-bars-option-menu-in-android-4-2 (end). -->
+
+        <item name="android:backgroundStacked">@color/dimgray</item>
+        <item name="android:backgroundSplit">@color/slategray</item>
+        <!--
+        <item name="android:background">@color/sa_green</item>
+        <item name="android:backgroundStacked">@color/stacked_green</item>
+        <item name="android:backgroundSplit">@color/sa_green</item>
+        -->
+
+        <!-- Customizing (end). -->
+
+        <!-- Debugging: Old style options (begin). -->
+
+        <!-- Debugging: tipxxi (begin) -->
+        <item name="android:height">0dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <!--
+        <item name="android:height">90dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+        -->
+        <!-- Debugging: tipxxi (end) -->
+
+        <!-- Testing -->
+
+        <item name="android:displayOptions">useLogo|showHome</item> <!-- No effect! -->
+
+        <!-- Don't works! -->
+        <!--
+        <item name="android:columnWidth">150dip</item>
+        <item name="android:divider">#FF0000</item>
+        <item name="android:dividerHeight">20dp</item>
+        <item name="android:layout_width">150dip</item>
+        <item name="android:minWidth">150dp</item>
+        <item name="android:width">150dip</item>
+        -->
+
+        <!-- Debugging: Old style options (end). -->
+
+        <!-- -->
+
+        <!--
+        <item name="android:progressBarStyle">@style/ProgressBar</item>
+        -->
+    </style>
+
+    <!--
+    <style name="ProgressBar" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_stylingactionbar</item>
+    </style>
+    -->
+
+    <!-- Cut off in tipxxi! -->
+    <!--
+    <style name="ActionBarTabStyle" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_stylingactionbar</item>
+    </style>
+    -->
+
+    <!-- https://blog.stylingandroid.com/styling-the-actionbar-part-2/ (end). -->
+
+    <!-- https://blog.stylingandroid.com/styling-the-actionbar-part-3/ (begin). -->
+
+    <!-- Cut off in tipxxi! -->
+    <!--
+    <style name="PopupMenu" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_stylingactionbar</item>
+    </style>
+     -->
+
+    <style name="DropDownListView" parent="@android:style/Widget.Holo.ListView.DropDown">
+
+        <!-- Cut off in tipxxi! -->
+        <!--
+        <item name="android:listSelector">@drawable/selectable_background_stylingactionbar</item>
+         -->
+
+        <!-- https://blog.stylingandroid.com/styling-the-actionbar-part-4/ (begin). -->
+
+        <item name="android:divider">@color/pressed</item>
+        <item name="android:dividerHeight">1dp</item>
+
+        <!-- Customizing (begin). -->
+
+        <item name="android:background">@color/slategray</item>
+        <!--
+        <item name="android:background">@color/sa_green</item>
+        -->
+
+        <!-- Customizing (end). -->
+
+        <!-- https://blog.stylingandroid.com/styling-the-actionbar-part-4/ (end). -->
+    </style>
+
+    <style name="Theme.stylingactionbar.widget" parent="@android:style/Theme.Holo">
+        <!-- Cut off in tipxxi! -->
+        <!--
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+         -->
+        <item name="android:dropDownListViewStyle">@style/DropDownListView</item>
+
+        <!-- https://blog.stylingandroid.com/styling-the-actionbar-part-4/ (begin). -->
+
+        <!-- Cut off in tipxxi! -->
+        <!--
+        <item name="android:spinnerStyle">@style/DropDownNav</item>
+         -->
+
+        <!-- https://blog.stylingandroid.com/styling-the-actionbar-part-4/ (end). -->
+
+    </style>
+
+    <!-- Cut off in tipxxi! -->
+    <!--
+    <style name="DropDownNav" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_stylingactionbar</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_stylingactionbar</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_stylingactionbar</item>
+    </style>
+     -->
+
+    <style name="DropDownItem" parent="@android:style/Widget.Holo.Light.DropDownItem.Spinner">
+        <item name="android:textAppearance">?android:attr/textAppearanceInverse</item>
+    </style>
+
+    <style name="SpinnerItem" parent="@android:style/Widget.Holo.TextView.SpinnerItem">
+        <item name="android:textAppearance">?android:attr/textAppearanceInverse</item>
+    </style>
+
+    <!-- https://blog.stylingandroid.com/styling-the-actionbar-part-3/ (end). -->
+
+    <!-- https://blog.stylingandroid.com/styling-the-actionbar-part-6/ (begin). -->
+
+    <!-- Cut off in tipxxi! -->
+    <!-- No effect im my case! -->
+    <!--
+    <style name="CloseButton" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
+        <item name="android:background">@drawable/selectable_background_stylingactionbar</item>
+    </style>
+     -->
+
+    <!-- https://blog.stylingandroid.com/styling-the-actionbar-part-6/ (end). -->
+
+    <!-- Debugging: tipxxi (end) -->
+
+    <!-- Base application theme. -->
+
+    <!-- Debugging: tipxxi (begin) -->
+    <!--
+    <style name="AppTheme">
+    </style>
+     -->
+    <!-- Debugging: tipxxi (end) -->
+
+    <!-- Error:(11) Error retrieving parent for item: No resource found that matches the given name 'Theme.AppCompat.Light.DarkActionBar'. -->
+    <!--
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+     -->
+
+        <!-- Customize your theme here. -->
+
+        <!-- Error:(4, 5) No resource found that matches the given name: attr 'colorPrimary'. -->
+        <!--
+        <item name="colorPrimary">@color/colorPrimary</item>
+         -->
+
+        <!-- Error:(4, 5) No resource found that matches the given name: attr 'colorPrimaryDark'. -->
+        <!--
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+         -->
+
+        <!-- Error:(4, 5) No resource found that matches the given name: attr 'colorAccent'. -->
+        <!--
+        <item name="colorAccent">@color/colorAccent</item>
+         -->
+    <!--
+    </style>
+     -->
+
+    <!-- Debugging: tipxxi (begin) -->
+    <!--
+    <style name="FullscreenTheme" parent="AppTheme">
+    </style>
+     -->
+    <!-- Debugging: tipxxi (end) -->
+
+    <!-- Error:(14) Error retrieving parent for item: No resource found that matches the given name 'AppTheme'. -->
+    <!--
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+     -->
+
+    <!-- Error:(11) Error retrieving parent for item: No resource found that matches the given name 'Widget.AppCompat.ActionBar'. -->
+    <!--
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+     -->
+
+</resources>

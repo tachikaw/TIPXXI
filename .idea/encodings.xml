@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="windows-1252">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bpaulo/tipxxi/activity/ControlPanelActivity.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bpaulo/tipxxi/activity/DynamicEditFieldSectionActivity.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bpaulo/tipxxi/activity/DynamicEditSectionActivity.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bpaulo/tipxxi/database/DatabaseHelper.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bpaulo/tipxxi/fragment/DynamicGridSectionFragment.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bpaulo/tipxxi/keyboard/CustomKeyboard.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bpaulo/tipxxi/util/EntityField.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bpaulo/tipxxi/util/Forward.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bpaulo/tipxxi/util/ForwardButton.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/bpaulo/tipxxi/util/ForwardEntity.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/anim_slide_in_left.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/anim_slide_in_right.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/anim_slide_out_left.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/anim_slide_out_right.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/slide_down.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/slide_in_left.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/slide_out_left.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/slide_up.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_disabled_shape.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_pressed.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_shape.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_shape_menu_principal.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/cab_background_top.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/sym_keyboard_delete.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/sym_keyboard_left.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/sym_keyboard_right.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_list_row.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/menu/actionmode.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/xml/alphanumeric_keyboard.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/xml/numeric_keyboard.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/xml/popup.xml" charset="windows-1252" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
