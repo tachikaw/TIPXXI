@@ -1,8 +1,23 @@
+# User-specific configurations
 *.iml
+
+# Gradle generated files
 .gradle
+
+# Local configuration file
 /local.properties
+
+# User-specific configurations
 /.idea/workspace.xml
 /.idea/libraries
-.DS_Store
+
+# Built application files
 /build
+
 /captures
+
+# OS-specific files
+.DS_Store
+
+# Testing .gitignore feature
+/.idea/compiler.xml
