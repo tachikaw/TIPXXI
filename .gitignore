@@ -20,4 +20,4 @@
 .DS_Store
 
 # Testing .gitignore feature
-/.idea/compiler.xml
+# /.idea/compiler.xml
